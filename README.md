@@ -11,8 +11,23 @@ index.html            One-page site: Hero, About, Articles, Free, Shop, Support,
 assets/css/style.css   Brand styles (colors, type, layout)
 assets/js/main.js      Mobile nav toggle + footer year
 assets/img/            favicon.svg, og-image.svg
+downloads/             The four free resources (see below), served as static files
 robots.txt, sitemap.xml
 ```
+
+## Free Resources
+
+The four cards in the "Free Resources" section link directly to static files in `downloads/` —
+no Ko-fi upload or email capture required, consistent with the free/GitHub-Pages-only approach:
+
+- `zenkyu-intro.pdf` — 5-page starter guide ("Zen for Modern Life")
+- `zenkyu-journal-template.pdf` — printable daily reflection template
+- `zenkyu-weekly-reflection.pdf` — weekly check-in guide + worksheet
+- `zenkyu-wallpaper-phone.png` (1170×2532) / `zenkyu-wallpaper-desktop.png` (2560×1440)
+
+Source HTML for the three PDFs and two wallpapers (used to render them via a headless browser)
+is not checked into this repo — regenerate by rebuilding similar print-styled HTML and rendering
+with Playwright's `page.pdf()` / `page.screenshot()` if these ever need updating.
 
 ## Brand guide
 
@@ -49,17 +64,26 @@ Real accounts wired in:
 - Gumroad: `https://zenkyujp.gumroad.com/` (footer only — Ko-fi stays the primary shop; Gumroad is
   reserved for future higher-priced items/bundles per the brand plan)
 
+`canonical`, `sitemap.xml`, and `robots.txt` now point at the real live URL
+(`https://hyakushiki-00100.github.io/landing/`). If a custom domain is added later, update all
+three.
+
 Still placeholder:
 
-- `<link rel="canonical">` in `index.html` — set to the real production URL once known
 - `og:image` / `twitter:image` — currently an SVG placeholder; replace with a rasterized
   PNG/JPG (1200×630) once final artwork exists, since not all crawlers render SVG OG images
-- The four Free Resources cards ("Free PDF", "Wallpaper", "Journal Template", "Weekly Reflection")
-  all link to the general Ko-fi shop page for now, since there aren't individual product URLs yet.
-  Point each to its specific Ko-fi product page once those exist.
 
 Instagram and Pinterest are intentionally omitted (no accounts yet) — add them back to the footer
 in `index.html` once created.
+
+## Copy review notes
+
+An editorial pass (2026-08-04) flagged and fixed: a cliché hero tagline, verbatim-repeated
+sentences across meta description/hero/About, and copy that read as contradicting the "no
+religion" positioning (e.g. "Grounded in Zen practice" → "Drawn from Zen practice"). The About
+section now includes a one-line, deliberately anonymous author note, since no verified author
+identity/name was available to attribute. Revisit and personalize once the site has a named
+author.
 
 ## Also recommended before public launch
 
