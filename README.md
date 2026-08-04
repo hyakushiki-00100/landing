@@ -36,18 +36,27 @@ robots.txt, sitemap.xml
 4. Once traffic justifies it, point a custom domain (e.g. `zenkyu.org`) at the
    Pages site and add a `CNAME` file.
 
-## Before going live — placeholder links to replace
+## Account links
 
-All of the following are placeholders and need real URLs once the accounts exist:
+Real accounts already wired in:
 
-- `https://medium.com/@zenkyu` — Medium profile / article links (`index.html`, "Read Articles" + Articles section)
-- `https://ko-fi.com/s/3cf76a0c4e` — Ko-fi shop link (already real, per project owner)
-- `https://ko-fi.com/zenkyu` — Ko-fi profile (Support section, footer)
-- `https://note.com/zenkyu` — note profile (Japanese section, footer)
-- `https://x.com/zenkyu`, `https://instagram.com/zenkyu`, `https://pinterest.com/zenkyu` — social links (footer)
+- Medium: `https://medium.com/@mk3372`
+- note: `https://note.com/zenkyu_jp`
+- X: `https://x.com/ZENKYUjp`
+- Ko-fi shop: `https://ko-fi.com/s/3cf76a0c4e`
+- Gumroad: `https://zenkyujp.gumroad.com/` (footer only — Ko-fi stays the primary shop; Gumroad is
+  reserved for future higher-priced items/bundles per the brand plan)
+
+Still placeholder — need a real URL once the account exists:
+
+- `https://ko-fi.com/zenkyu` — Ko-fi **profile** page (Support section, footer). This is different
+  from the Ko-fi shop link above — confirm the actual Ko-fi username and update.
 - `<link rel="canonical">` in `index.html` — set to the real production URL once known
 - `og:image` / `twitter:image` — currently an SVG placeholder; replace with a rasterized
   PNG/JPG (1200×630) once final artwork exists, since not all crawlers render SVG OG images
+
+Instagram and Pinterest are intentionally omitted (no accounts yet) — add them back to the footer
+in `index.html` once created.
 
 ## Also recommended before public launch
 
