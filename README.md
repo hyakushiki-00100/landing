@@ -38,22 +38,25 @@ robots.txt, sitemap.xml
 
 ## Account links
 
-Real accounts already wired in:
+Real accounts wired in:
 
 - Medium: `https://medium.com/@mk3372`
 - note: `https://note.com/zenkyu_jp`
 - X: `https://x.com/ZENKYUjp`
-- Ko-fi shop: `https://ko-fi.com/s/3cf76a0c4e`
+- Ko-fi profile: `https://ko-fi.com/zenkyu` (Support section, footer)
+- Ko-fi shop: `https://ko-fi.com/zenkyu/shop` (Hero "Shop Digital Resources", Free Resources cards,
+  Shop section "Visit the Ko-fi Shop")
 - Gumroad: `https://zenkyujp.gumroad.com/` (footer only — Ko-fi stays the primary shop; Gumroad is
   reserved for future higher-priced items/bundles per the brand plan)
 
-Still placeholder — need a real URL once the account exists:
+Still placeholder:
 
-- `https://ko-fi.com/zenkyu` — Ko-fi **profile** page (Support section, footer). This is different
-  from the Ko-fi shop link above — confirm the actual Ko-fi username and update.
 - `<link rel="canonical">` in `index.html` — set to the real production URL once known
 - `og:image` / `twitter:image` — currently an SVG placeholder; replace with a rasterized
   PNG/JPG (1200×630) once final artwork exists, since not all crawlers render SVG OG images
+- The four Free Resources cards ("Free PDF", "Wallpaper", "Journal Template", "Weekly Reflection")
+  all link to the general Ko-fi shop page for now, since there aren't individual product URLs yet.
+  Point each to its specific Ko-fi product page once those exist.
 
 Instagram and Pinterest are intentionally omitted (no accounts yet) — add them back to the footer
 in `index.html` once created.
