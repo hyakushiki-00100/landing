@@ -76,6 +76,38 @@ Still placeholder:
 Instagram and Pinterest are intentionally omitted (no accounts yet) — add them back to the footer
 in `index.html` once created.
 
+## Article backlog (Medium)
+
+The Articles section features 6 of the following real, published essays at a time. Rotate the
+featured 6 periodically for freshness — swap `href`/title/blurb in `index.html`, keep the rest
+here as backlog:
+
+**Currently featured:**
+- https://medium.com/@mk3372/you-will-never-be-in-this-exact-room-again-the-zen-phrase-ichigo-ichie-%E4%B8%80%E6%9C%9F%E4%B8%80%E4%BC%9A-cd88caf466eb
+- https://medium.com/@mk3372/your-like-count-is-a-flower-in-a-mirror-the-zen-phrase-ky%C5%8Dka-suigetsu-ec692fa78d9b
+- https://medium.com/@mk3372/the-doorway-where-you-take-off-your-shoes-means-gate-to-the-profound-the-zen-word-genkan-%E7%8E%84%E9%96%A2-a6c20c8be956
+- https://medium.com/@mk3372/put-it-down-even-im-carrying-nothing-the-zen-word-h%C5%8Dgejaku-%E6%94%BE%E4%B8%8B%E8%91%97-fb1fc6992dd5
+- https://medium.com/@mk3372/the-5-minutes-before-you-check-your-phone-decide-more-than-you-think-597f1a07316e
+- https://medium.com/@mk3372/why-a-cluttered-desktop-is-quietly-draining-your-focus-63d469658eb3
+
+**Backlog (not yet featured on the homepage):**
+- https://medium.com/@mk3372/master-are-you-there-the-zen-habit-of-calling-your-own-name-%E4%B8%BB%E4%BA%BA%E5%85%AC-ec211c6e27d5
+- https://medium.com/@mk3372/the-lantern-went-out-look-at-your-feet-the-zen-instruction-kankyakka-%E7%9C%8B%E8%84%9A%E4%B8%8B-511c3416d0f5
+- https://medium.com/@mk3372/we-just-get-each-other-isnt-a-compliment-it-s-the-zen-story-of-holding-up-a-flower-c35bcd62fb20
+- https://medium.com/@mk3372/shouting-louder-doesnt-wake-anyone-the-zen-word-katsu-%E5%96%9D-8dc1f128c7d7
+- https://medium.com/@mk3372/results-take-time-isnt-a-pep-talk-it-s-the-zen-case-for-sequence-ab6e6002e534
+- https://medium.com/@mk3372/the-boundary-you-lost-when-you-stopped-commuting-9123f77cd15f
+- https://medium.com/@mk3372/the-zen-word-a-un-%E9%98%BF%E5%90%BD-living-beginnings-and-endings-as-a-pair-54d6ffdae910
+- https://medium.com/@mk3372/the-zen-word-un-%E5%90%BD-what-a-single-closed-mouth-character-teaches-us-about-silence-and-endings-c0ea2d91c832
+- https://medium.com/@mk3372/rain-or-shine-both-are-good-what-actually-ruins-a-rainy-day-26e65ef8d3eb
+- https://medium.com/@mk3372/dharma-rain-the-same-rain-different-growth-562ec691a4b4
+- https://medium.com/@mk3372/the-sound-of-raindrops-are-you-hearing-it-or-just-naming-it-5d5f845dae5d
+- https://medium.com/@mk3372/why-your-best-people-freeze-in-a-crisis-and-the-japanese-word-for-the-fix-b00f7cf00d9f
+
+Note: two different Medium post IDs were submitted for "Why a cluttered desktop..." — the
+featured one is `63d469658eb3`; a second copy (`babb28a2cb69`) exists on Medium but is treated as
+a duplicate and not linked here.
+
 ## Copy review notes
 
 An editorial pass (2026-08-04) flagged and fixed: a cliché hero tagline, verbatim-repeated
