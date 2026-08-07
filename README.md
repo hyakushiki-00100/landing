@@ -68,6 +68,18 @@ Real accounts wired in:
 (`https://hyakushiki-00100.github.io/landing/`). If a custom domain is added later, update all
 three.
 
+## Ko-fi products (Shop section)
+
+The Shop section features 3 real products from the "Five Castles: Japan's National Treasures"
+series (cover images in `assets/img/kofi/`, resized to 800×800 JPG for page weight):
+
+- Himeji Castle Guide (01) — https://ko-fi.com/s/3cf76a0c4e
+- Inuyama Castle Guide (03) — https://ko-fi.com/s/1ef67daa2f
+- Matsue Castle Guide (05) — https://ko-fi.com/s/26300c42db
+
+Two more castles in the series (02, 04) are not yet linked — add their cards here once those
+products exist and their Ko-fi URLs are known.
+
 Still placeholder:
 
 - `og:image` / `twitter:image` — currently an SVG placeholder; replace with a rasterized

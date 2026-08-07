@@ -302,6 +302,10 @@ a {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.card-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
   background: var(--bg);
   border: 1px solid var(--line);
@@ -336,6 +340,37 @@ a.card:hover {
 
 .section-alt .card {
   background: var(--bg);
+}
+
+/* Cover-image card variant (e.g. note articles) */
+.card-cover {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-cover-img {
+  width: 100%;
+  aspect-ratio: 1280 / 670;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--line);
+}
+
+.card-cover-body {
+  padding: 24px 28px 28px;
+}
+
+.card-cover-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.card-cover-body p {
+  color: var(--text-muted);
+  margin: 0 0 16px;
+  font-size: 0.95rem;
 }
 
 /* Feature list (Shop) */
@@ -474,7 +509,8 @@ a.card:hover {
 
 @media (max-width: 560px) {
   .card-grid,
-  .card-grid-4 {
+  .card-grid-4,
+  .card-grid-2 {
     grid-template-columns: 1fr;
   }
 }
