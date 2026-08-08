@@ -356,8 +356,24 @@ a.card:hover {
   border-bottom: 1px solid var(--line);
 }
 
+/* Square-source cover images (e.g. Ko-fi product photos) — the wide 1280:670
+   crop above cuts off text baked into these images, so keep them closer to
+   their native aspect ratio instead. */
+.card-cover-img-square {
+  aspect-ratio: 1 / 1;
+}
+
 .card-cover-body {
   padding: 24px 28px 28px;
+}
+
+.card-eyebrow {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
 }
 
 .card-cover-body h3 {
