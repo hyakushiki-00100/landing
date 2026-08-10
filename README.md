@@ -7,11 +7,14 @@ hosted for free on GitHub Pages, with no build step and no dependencies.
 ## Structure
 
 ```
-index.html            One-page site: Hero, About, Articles, Free, Shop, Support, Japanese
-assets/css/style.css   Brand styles (colors, type, layout)
-assets/js/main.js      Mobile nav toggle + footer year
-assets/img/            favicon.svg, og-image.svg
-downloads/             The four free resources (see below), served as static files
+index.html              One-page site: Hero, About, Articles, Free, Shop, Support, Japanese
+assets/css/style.css    Brand styles (colors, type, layout)
+assets/js/main.js       Mobile nav toggle + footer year
+assets/img/             favicon.svg, og-image.svg
+assets/img/notes/       Cover images for featured note articles
+assets/img/kofi/        Cover images for featured Ko-fi products
+downloads/              The four free resources (see below), served as static files
+tools/downloads-src/    Source HTML for the PDFs/wallpapers in downloads/ (see below)
 robots.txt, sitemap.xml
 ```
 
@@ -25,9 +28,18 @@ no Ko-fi upload or email capture required, consistent with the free/GitHub-Pages
 - `zenkyu-weekly-reflection.pdf` — weekly check-in guide + worksheet
 - `zenkyu-wallpaper-phone.png` (1170×2532) / `zenkyu-wallpaper-desktop.png` (2560×1440)
 
-Source HTML for the three PDFs and two wallpapers (used to render them via a headless browser)
-is not checked into this repo — regenerate by rebuilding similar print-styled HTML and rendering
-with Playwright's `page.pdf()` / `page.screenshot()` if these ever need updating.
+Source HTML for these lives in `tools/downloads-src/` (`intro.html`, `journal.html`, `weekly.html`,
+`wallpaper-phone.html`, `wallpaper-desktop.html`, shared `print-base.css`). To regenerate after
+editing, serve that folder locally and render with headless Chromium:
+
+```
+cd tools/downloads-src && python3 -m http.server 8940 &
+# then, in Node with Playwright:
+#   page.pdf({ width: '210mm', height: '297mm', printBackground: true }) for the *.html print pages
+#   page.screenshot() at viewport 1170x2532 / 2560x1440 for the wallpapers
+```
+
+Output files go back into `downloads/`.
 
 ## Brand guide
 
@@ -58,9 +70,8 @@ Real accounts wired in:
 - Medium: `https://medium.com/@mk3372`
 - note: `https://note.com/zenkyu_jp`
 - X: `https://x.com/ZENKYUjp`
-- Ko-fi profile: `https://ko-fi.com/zenkyu` (Support section, footer)
-- Ko-fi shop: `https://ko-fi.com/zenkyu/shop` (Hero "Shop Digital Resources", Free Resources cards,
-  Shop section "Visit the Ko-fi Shop")
+- Ko-fi profile: `https://ko-fi.com/zenkyu` (Support section)
+- Ko-fi shop: `https://ko-fi.com/zenkyu/shop` (Shop section "Visit the Ko-fi Shop")
 - Gumroad: `https://zenkyujp.gumroad.com/` (footer only — Ko-fi stays the primary shop; Gumroad is
   reserved for future higher-priced items/bundles per the brand plan)
 
@@ -119,6 +130,34 @@ here as backlog:
 Note: two different Medium post IDs were submitted for "Why a cluttered desktop..." — the
 featured one is `63d469658eb3`; a second copy (`babb28a2cb69`) exists on Medium but is treated as
 a duplicate and not linked here.
+
+## Adversarial review fixes (2026-08-08)
+
+A harsher, adversarial editorial pass (looking for overstated claims and broken assumptions, not
+just typos) found and fixed:
+
+- **Ko-fi card images were cropping out the product's own branding.** `.card-cover-img` used a wide
+  1280:670 crop meant for note's landscape covers; applied to the square (800×800) Ko-fi covers, it
+  cut off both the "Five Castles" series badge and the castle name baked into the image. Fixed with
+  a `.card-cover-img-square` modifier (1:1 aspect ratio) for Ko-fi cards, plus an explicit
+  "Five Castles — 0X" eyebrow line in the card text so the series context isn't only in a
+  potentially-cropped image.
+- **Stale tagline in shipped assets.** `og-image.svg` and the `tools/downloads-src/` source for the
+  intro PDF and both wallpapers still said "Ancient Wisdom for Modern Minds" after the hero copy
+  was changed to "Practical Zen for Ordinary Days" — meaning the most-shared asset (OG image) and
+  the free downloads never got the fix. Now consistent, and regenerated into `downloads/`.
+- **Hero's primary CTA sent visitors straight to Medium**, bypassing the rest of the page on first
+  contact — undermines the "this page is the hub" premise. Now links to `#articles` instead.
+- **Support section implied a real membership tier** ("Become a Member") that pointed at the exact
+  same Ko-fi profile URL as "Buy Me a Coffee" — collapsed into one honest CTA.
+- **`<html lang="en">` with no language attribute on the Japanese section** — added `lang="ja"` to
+  the `#japanese` section.
+
+Not yet addressed (lower priority, tracked here for later): a few unused/dead CSS classes
+(`.card-static`, `.feature-list`, `.card-grid-2` no longer referenced from `index.html`), `<img>`
+tags missing explicit `width`/`height` (minor layout-shift risk), the nav order (`Shop` before
+`Free`) not matching the on-page section order (`Free` before `Shop`), and an inline
+`style="margin-top:-32px;"` hack in the About section.
 
 ## Copy review notes
 

@@ -1,0 +1,241 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FAFAF8;
+  color: #222222;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  font-size: 11pt;
+  line-height: 1.65;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.font-display {
+  font-family: 'Shippori Mincho', serif;
+}
+
+.page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  padding: 22mm 20mm;
+  page-break-after: always;
+  overflow: hidden;
+}
+
+.page:last-child { page-break-after: auto; }
+
+.eyebrow {
+  font-family: 'Shippori Mincho', serif;
+  color: #3F5D4A;
+  letter-spacing: 0.25em;
+  font-size: 10pt;
+  margin: 0 0 10mm;
+}
+
+h1.doc-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 30pt;
+  letter-spacing: 0.05em;
+  margin: 0 0 6mm;
+  font-weight: 700;
+}
+
+h2.doc-sub {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 14pt;
+  color: #3F5D4A;
+  font-weight: 500;
+  margin: 0 0 10mm;
+}
+
+h2.section-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 18pt;
+  letter-spacing: 0.03em;
+  margin: 0 0 6mm;
+  border-top: 1px solid #E8E8E8;
+  padding-top: 8mm;
+}
+
+h3.item-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 12.5pt;
+  margin: 0 0 2mm;
+}
+
+p {
+  margin: 0 0 4mm;
+  color: #222222;
+}
+
+p.muted {
+  color: #5B5B57;
+}
+
+.rule {
+  border: none;
+  border-top: 1px solid #E8E8E8;
+  margin: 8mm 0;
+}
+
+.enso {
+  position: absolute;
+  color: #3F5D4A;
+  opacity: 0.08;
+}
+
+.footer-mark {
+  position: absolute;
+  bottom: 16mm;
+  left: 20mm;
+  right: 20mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8.5pt;
+  color: #8a8a85;
+  border-top: 1px solid #E8E8E8;
+  padding-top: 4mm;
+}
+
+.footer-mark .brand {
+  font-family: 'Shippori Mincho', serif;
+  letter-spacing: 0.08em;
+  color: #3F5D4A;
+}
+
+.item {
+  margin-bottom: 7mm;
+}
+
+.item .num {
+  font-family: 'Shippori Mincho', serif;
+  color: #3F5D4A;
+  font-size: 10pt;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 1mm;
+}
+
+.pillar-row {
+  display: flex;
+  gap: 8mm;
+  margin-top: 6mm;
+}
+
+.pillar-col {
+  flex: 1;
+  border-top: 1px solid #E8E8E8;
+  padding-top: 4mm;
+}
+
+.pillar-col .mark {
+  font-family: 'Shippori Mincho', serif;
+  color: #3F5D4A;
+  font-size: 9pt;
+  letter-spacing: 0.1em;
+}
+
+.pillar-col h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 11.5pt;
+  margin: 2mm 0 2mm;
+}
+
+.pillar-col p {
+  font-size: 9.5pt;
+  color: #5B5B57;
+  margin: 0;
+}
+
+blockquote {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 13pt;
+  color: #2E4636;
+  border-left: 2px solid #3F5D4A;
+  padding-left: 6mm;
+  margin: 8mm 0;
+  line-height: 1.6;
+}
+
+.links a {
+  color: #2E4636;
+  text-decoration: none;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.cover .enso-big {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150mm;
+  height: 150mm;
+  transform: translate(-50%, -50%);
+  color: #3F5D4A;
+  opacity: 0.07;
+}
+
+.cover .kanji {
+  font-family: 'Shippori Mincho', serif;
+  color: #3F5D4A;
+  letter-spacing: 0.3em;
+  font-size: 12pt;
+  margin-bottom: 8mm;
+  position: relative;
+}
+
+.cover h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 46pt;
+  letter-spacing: 0.08em;
+  margin: 0;
+  position: relative;
+}
+
+.cover .cover-tagline {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 15pt;
+  color: #2E4636;
+  margin: 6mm 0 4mm;
+  position: relative;
+}
+
+.cover .cover-sub {
+  color: #5B5B57;
+  font-size: 10.5pt;
+  max-width: 110mm;
+  position: relative;
+}
+
+.field-line {
+  border-bottom: 1px solid #cfcfc9;
+  height: 9mm;
+}
+
+.field-block {
+  margin-bottom: 7mm;
+}
+
+.field-block .label {
+  font-size: 9pt;
+  letter-spacing: 0.06em;
+  color: #3F5D4A;
+  text-transform: uppercase;
+  margin-bottom: 2mm;
+  display: block;
+}

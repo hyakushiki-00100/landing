@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; }
+  .wall {
+    width: 1170px;
+    height: 2532px;
+    background: #FAFAF8;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .enso {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 900px;
+    transform: translate(-50%, -50%);
+    color: #3F5D4A;
+    opacity: 0.14;
+  }
+  .center {
+    position: relative;
+    text-align: center;
+  }
+  .kanji {
+    font-family: 'Shippori Mincho', serif;
+    color: #3F5D4A;
+    letter-spacing: 22px;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 130px;
+    letter-spacing: 14px;
+    color: #222222;
+    margin: 0;
+  }
+  .tagline {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 36px;
+    color: #2E4636;
+    margin-top: 30px;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="wall">
+  <svg class="enso" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <path d="M200,40 A160,160 0 1 1 55,120" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+  </svg>
+  <div class="center">
+    <p class="kanji">禅</p>
+    <h1>ZENKYU</h1>
+    <p class="tagline">Practical Zen<br>for Ordinary Days</p>
+  </div>
+</div>
+</body>
+</html>
