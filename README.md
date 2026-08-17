@@ -168,9 +168,30 @@ section now includes a one-line, deliberately anonymous author note, since no ve
 identity/name was available to attribute. Revisit and personalize once the site has a named
 author.
 
+## Analytics (GA4)
+
+GA4 is installed (`assets/js/main.js` + the snippet in `<head>` of `index.html`), measurement ID
+`G-RD2NYK8QKS`. Beyond default pageview tracking, every outbound/download link on the page is
+auto-tracked — no per-link markup needed. `classifyDestination()` in `main.js` inspects each link's
+hostname and fires one of two GA4 events on click:
+
+- `outbound_click` — Medium, note, Ko-fi, Gumroad, or X links, with `destination` (`medium` /
+  `note` / `kofi` / `gumroad` / `x`), `section` (the id of the enclosing `<section>`, e.g.
+  `articles`, `shop`, `japanese`), and `link_text` (the card's `<h3>`, or the link text if there's
+  no heading).
+- `file_download` — anything under `downloads/` (the free PDFs and wallpapers), same fields with
+  `destination: 'download'`.
+
+New links picked up automatically as long as they point to one of the domains above or to
+`downloads/` — no code change needed when rotating Medium articles or adding new Ko-fi products.
+`allow_google_signals` is set to `false` (no ads/remarketing signal collection).
+
+GA4 uses cookies; there's no consent banner yet, so treat this as US/Japan-first analytics rather
+than something compliant for EU visitors — add a consent mechanism (or switch to a cookieless
+analytics tool) before actively promoting to an EU audience.
+
 ## Also recommended before public launch
 
-- Google Analytics 4 property + tracking snippet
 - Google Search Console verification + sitemap submission
 - Privacy Policy / Terms pages (not included in this first pass — add when needed)
 
